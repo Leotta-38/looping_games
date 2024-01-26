@@ -1,0 +1,21 @@
+<h2>Room 1</h2>
+<img src="/img/room1.jpg" alt="room1">
+<div class="hint display-none">
+  <p>Hint</p>
+  <div class="display-none">
+    <p class="each-hint">Hint1: <span class="display-none">A: apple, banana, cherry. B: Kiwi, lemon, mango. C: orange, pineapple, pear. D: raspberry, strawberry, tomato</span></p>
+    <p class="each-hint">Hint2: <span class="display-none">Forcus on the first letter of each fruit name.</span></p>
+  </div>
+</div>
+
+
+<%- contentFor('door1') %>
+<div class="small-door door-1">
+  <div class="door-knob small-door-knob"></div>I
+</div>
+
+<%- contentFor('script') %>
+<script defer src="js/app2.js"></script>
+<% if (count > 1) { %>
+  <script defer src="js/app3.js"></script>
+<% } %>

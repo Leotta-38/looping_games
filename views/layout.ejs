@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+  <title>Escape from the looping rooms</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/img/question_emoticon_5618.ico" type="image/x-icon">
+  <script defer src="js/jquery-3.7.1.min.js"></script>
+  <script defer src="js/app.js"></script>
+  <%-script%>
+</head>
+<body>
+  <section class="title-wrapper">
+    <%-door1%>
+    <div class="small-door door-2">
+      <div class="door-knob small-door-knob"></div>II
+    </div>
+    <h1>Escape from the looping rooms</h1>
+    <div class="small-door door-3">
+      <div class="door-knob small-door-knob"></div>III
+    </div>
+    <div class="small-door door-4">
+      <div class="door-knob small-door-knob"></div>IV
+    </div>
+  </section>
+
+  <section class="whole-wrapper">
+    <section class="description">
+      <ul>
+        <li>You have to open the five correct doors to ecsape from the looping rooms.</li>
+        <li>You will be given a question in each room.</li>
+        <li>Open the door which has the correct answer.</li>
+        <li>You can escape only when you open all the five correct doors.</li>
+        <li>If you open a door that isn't correct, you will return to the first room when you open the fifth door.</li>
+        <li>If the number of times you looped around the rooms becomes over 10, hints will be provided below the questions.</li>
+      </ul>
+    </section>
+
+    <section class="counter">
+      <p>The number of times you are looping round the rooms: <%= count %></p>
+    </section>
+  
+    <section class="black-out">
+    </section>
+  
+    <section class="content-wrapper">
+      <section class="door-wrapper">
+        <a href="/<%= next %>?a=A">
+          <div class="door-div">
+            <div class="door door-a">
+              <div class="door-knob"></div>
+              A
+            </div>
+            <div class="back back-a"></div>
+          </div>
+        </a>
+        <a href="/<%= next %>?a=B">
+          <div class="door-div">
+            <div class="door door-b">
+              <div class="door-knob"></div>
+              B
+            </div>
+            <div class="back back-b"></div>
+          </div>
+        </a>
+        <a href="/<%= next %>?a=C">
+          <div class="door-div">
+            <div class="door door-c">
+              <div class="door-knob"></div>
+              C
+            </div>
+            <div class="back back-c"></div>
+          </div>
+        </a>
+        <a href="/<%= next %>?a=D">
+          <div class="door-div">
+            <div class="door door-d">
+              <div class="door-knob"></div>
+              D
+            </div>
+            <div class="back back-d"></div>
+          </div>
+        </a>  
+      </section>
+    
+      <section class="room">
+        <%- body %>
+      </section>  
+    </section>  
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Leotta</p>
+  </footer>
+
+  <audio data-key="door" src="audio/door.mp3"></audio>
+</body>
+</html>

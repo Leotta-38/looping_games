@@ -1,0 +1,35 @@
+<h2>Room 5</h2>
+<img src="/img/room5.jpg" alt="room5">
+<div class="hint display-none">
+  <p>Hint</p>
+  <div class="display-none">
+    <p class="each-hint">Hint1: <span class="display-none">"e" isn't the correct answer.</span></p>
+    <p class="each-hint">Hint2: <span class="display-none">You can't get the correct answer only in this page.</span></p>
+    <p class="each-hint">Hint3: <span class="display-none">Didn't you see a letter which is surrounded by something green?</span></p>
+    <p class="each-hint">Hint4: <span class="display-none">You can find a clue in the Room 2.</span></p>
+    <p class="each-hint">Hint5: <span class="display-none">According to the game explanation, "Open the door which has the correct answer."</span></p>
+    <p class="each-hint">Hint6: <span class="display-none">Can you find a door which has the letter "I" and which has the same colour?</span></p>
+  </div>
+</div>
+
+
+<%- contentFor('door1') %>
+<% if (aLink)  { %>
+<a href="/win">
+  <div class="small-door door-1 gray">
+    <div class="small-door-correct">I
+      <div class="door-knob small-door-knob"></div>
+    </div>
+  </div>
+</a>
+<% } else { %>
+<div class="small-door door-1">
+  <div class="door-knob small-door-knob"></div>I
+</div>
+<% } %>
+
+<%- contentFor('script') %>
+<script defer src="js/app2.js"></script>
+<% if (count > 1) { %>
+  <script defer src="js/app3.js"></script>
+<% } %>

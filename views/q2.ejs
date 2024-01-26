@@ -1,0 +1,22 @@
+<h2>Room 2</h2>
+<img src="/img/room2.jpg" alt="room2">
+<div class="hint display-none">
+  <p>Hint</p>
+  <div class="display-none">
+    <p class="each-hint">Hint1: <span class="display-none">The first image is a bisycle. The second image is a rocket.</span></p>
+    <p class="each-hint">Hint2: <span class="display-none"><img src="/img/A.png"> is the alphabet one before "B".</span></p>
+    <p class="each-hint">Hint3: <span class="display-none">The letters in red are one before the original letter. The letters in blue are two before the original one. The letters in green are one after the original one.</span></p>
+  </div>
+</div>
+
+
+<%- contentFor('door1') %>
+<div class="small-door door-1">
+  <div class="door-knob small-door-knob"></div>I
+</div>
+
+<%- contentFor('script') %>
+<script defer src="js/app2.js"></script>
+<% if (count > 1) { %>
+  <script defer src="js/app3.js"></script>
+<% } %>
