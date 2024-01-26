@@ -8,5 +8,6 @@ CREATE TABLE "usersessions" (
   "q3" varchar,
   "q4" varchar,
   "count" integer,
-  "username" text
+  "username" text,
+  "date" text
 );

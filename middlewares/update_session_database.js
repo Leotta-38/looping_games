@@ -16,12 +16,14 @@ const updateSessionDatabase = (req, res, next) => {
 
       const sid = req.session.id
       const expire = req.session.cookie._expires
+      const date = new Date().toLocaleString()
+
 
       const sql2 = `
-        INSERT INTO usersessions (sid, expire) 
-        VALUES ($1, $2);
+        INSERT INTO usersessions (sid, expire, date) 
+        VALUES ($1, $2, $3);
       `
-      db.query(sql2, [sid, expire], (err2, result2) => {
+      db.query(sql2, [sid, expire, date], (err2, result2) => {
         if (err2) {
           console.log(err2);
         }
